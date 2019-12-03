@@ -47,7 +47,7 @@ class CKEditor extends React.Component {
 	}
 
 	render() {
-		return <div contentEditable="true" style={ this.props.style } ref={ ref => ( this.element = ref ) }></div>;
+		return <div id={ this.props.id } contentEditable="true" style={ this.props.style } ref={ ref => ( this.element = ref ) }></div>;
 	}
 
 	_initEditor() {
@@ -113,6 +113,7 @@ CKEditor.propTypes = {
 		'classic',
 		'inline'
 	] ),
+	id: PropTypes.string,
 	data: PropTypes.string,
 	config: PropTypes.object,
 	style: PropTypes.object,
